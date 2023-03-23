@@ -1,0 +1,72 @@
+.box-pad {
+  /* padding: 15px; */
+}
+.boxes-row {
+  /* margin-bottom: 20px; */
+}
+
+.alfaisal-title {
+  /* padding-right: 39px; */
+  text-align: right;
+  display: flex;
+  font-size: 40px;
+  font-weight: 600;
+  color: #00305b;
+  padding-bottom: 5px;
+  font-family: "Arial", Helvetica, sans-serif;
+  margin-top: -40px;
+  margin-left: 175px;
+}
+.holding {
+  font-size: 30px;
+}
+.video-box {
+  /* display: flex;
+  align-items: right; */
+  margin-left: 20px;
+  width: 150px;
+}
+.home-box2-content {
+  color: #00305b;
+  font-size: 17px;
+  line-height: 26px;
+  letter-spacing: 0.18px;
+  text-align: justify;
+  padding-top: -23px;
+  padding-bottom: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.column1 {
+  float: left;
+  height: 40px;
+  width: 34%;
+}
+.column2 {
+  float: left;
+  width: 60%;
+}
+
+.read-morebtn {
+  padding: 12px 30px;
+
+  font-size: 16px;
+  position: relative;
+  background: #0f4c85;
+  /* border: 1px solid #fff; */
+  font-style: normal;
+  text-decoration: none;
+  align-items: center;
+}
+
+.read-morebtn:hover {
+  background-color: #0f4c85;
+  color: white;
+}

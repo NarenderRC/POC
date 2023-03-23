@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  color: black;
+  padding: 10px;
+  height: auto;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.chairman-msg h2 {
+  margin-top: 125px;
+  text-align: right;
+  font-size: 29px;
+  font-weight: 600;
+  color: #00305b;
+  padding-bottom: 5px;
+  font-family: "Arial", Helvetica, sans-serif;
+  margin-bottom: 10px;
+  line-height: 20.6px;
+}
+
+.chairmanmsg {
+  font-size: 20px;
+  font-weight: 600;
+  color: #00305b;
+}
+.chairman-quote,
+h6 {
+  color: #00305b;
+}
+.shikh {
+  margin-top: 28px;
+}
+.btn-readmore {
+  margin-top: 40px;
+  align-items: center;
+  /* margin-right: 100px; */
+}
