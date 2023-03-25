@@ -3,8 +3,11 @@ import React from "react";
 import srccareer from "../../images/career.jpg";
 import Button from "react-bootstrap/Button";
 import "./Careers.css";
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
-const Careers = () => {
+
+const Careers = ({data}) => {
+  console.log("caerrer ===", data)
   return (
     <>
       <div className="boxes-row row box-pad home-box9">
@@ -13,24 +16,11 @@ const Careers = () => {
             <div className="col-md-6 col-sm-6 col-xs-12 ">
               <div className="home-box9-content-wrap">
                 <div className="home-box9-title hidden-xs">
-                  <h2>CAREERS</h2>
+                  <h2>{data?.fields.headline}</h2>
                 </div>
                 <div className="home-box9-content">
-                  <p>
-                    We aim to attract, develop and retain the best people by
-                    offering attractive career opportunities. Our recruitment
-                    team is continuously searching for talented candidates every
-                    day, and will contact you if your skills and experience
-                    match our requirements. We encourage you to send your
-                    resume, as this allows us to find you in the future should a
-                    suitable vacancy arise.
-                  </p>
-                  <p>
-                    Submit your CV to:
-                    <a href="mailto:hr@alfaisalholding.com" target="_self">
-                      hr@alfaisalholding.com
-                    </a>
-                  </p>
+                { documentToReactComponents(data?.fields.bodyText)}
+                
                   <div className="btn-readmore">
                     <Button variant="primary">Read More</Button>
                   </div>
@@ -40,7 +30,7 @@ const Careers = () => {
 
             <div className="col-md-6 col-sm-6 col-xs-12 pull-right">
               <div className="home-box9-image">
-                <img src={srccareer} alt="" width="580" height="460" />
+                <img src={data?.fields.image.fields.file.url} alt="" width="580" height="460" />
               </div>
             </div>
           </div>

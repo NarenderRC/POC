@@ -11,101 +11,37 @@ import manufacture from "../../images/manufacuring.jpg";
 import amolcomapany from "../../images/amol.jpg";
 
 import Button from "react-bootstrap/Button";
-const Whatwedo = () => {
+const Whatwedo = ({data}) => {
+  console.log("what we do:",data)
   return (
     <>
       <div class="home-box6-title">
         <h1 class="title-center">
-          <span>WHAT</span> WE DO
+        {data?.fields.title}
         </h1>
       </div>
-      <div className="image-container">
-        <div className="image-container">
-          <img src={education} alt="education" />
+
+      <div className="card-section">
+
+        {data?.fields.whatWeDoCards.map((card,i)=>(
+          <div className="image-container">
+          <img src={card?.fields.image.fields.file.url} alt="education" />
 
           <div className="text-block">
-            <h5>Culture,Education,Leisure & Sports</h5>
+            <h5 style={{marginTop: '12px'}}>{card.fields.title}</h5>
             <div className="btn-readmore" id="btn-on-images">
               <Button variant="primary">Read More</Button>
             </div>
           </div>
         </div>
-        <div className="image-container">
-          <img src={hospital} alt="education" />
-
-          <div className="text-block">
-            <h5>Hospitality</h5>
-            <div className="btn-readmore" id="btn-on-images">
-              <Button variant="primary">Read More</Button>
-            </div>
-          </div>
-        </div>
-        <div className="image-container">
-          <img src={realestate} alt="education" />
-
-          <div className="text-block">
-            <h5>Real Estate</h5>
-            <div className="btn-readmore" id="btn-on-images">
-              <Button variant="primary">Read More</Button>
-            </div>
-          </div>
-        </div>
+        ))}
+        
+       
       </div>
 
-      <div className="image-container">
-        <div className="image-container">
-          <img src={builder} alt="education" />
-
-          <div className="text-block">
-            <h5>constraction & Project Manengment</h5>
-            <div className="btn-readmore" id="btn-on-images">
-              <Button variant="primary">Read More</Button>
-            </div>
-          </div>
-        </div>
-        <div className="image-container">
-          <img src={trading} alt="education" />
-
-          <div className="text-block">
-            <h5>Trading & Distribution</h5>
-            <div className="btn-readmore" id="btn-on-images">
-              <Button variant="primary">Read More</Button>
-            </div>
-          </div>
-        </div>
-        <div className="image-container">
-          <img src={service} alt="education" />
-
-          <div className="text-block">
-            <h5>Service</h5>
-            <div className="btn-readmore" id="btn-on-images">
-              <Button variant="primary">Read More</Button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="image-container">
-        <div className="image-container">
-          <img src={manufacture} alt="education" />
-
-          <div className="text-block">
-            <h5>Manufacturing</h5>
-            <div className="btn-readmore" id="btn-on-images">
-              <Button variant="primary">Read More</Button>
-            </div>
-          </div>
-        </div>
-        <div className="image-container">
-          <img src={amolcomapany} alt="education" />
-
-          <div className="text-block">
-            <h5>Aamal company QPSC</h5>
-            <div className="btn-readmore" id="btn-on-images">
-              <Button variant="primary">Read More</Button>
-            </div>
-          </div>
-        </div>
-      </div>
+    
+     
+    
     </>
   );
 };

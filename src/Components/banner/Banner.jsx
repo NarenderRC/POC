@@ -2,9 +2,10 @@ import React from "react";
 import doharesidence from "../../images/2020-aleph-doha-residences.jpg";
 import Img from "../../images/alfisal.png";
 import "./Banner.css";
-const Banner = () => {
+const Banner = ({data}) => {
+  console.log("banner data", data)
   const myStyle = {
-    backgroundImage: `url(${doharesidence})`,
+    backgroundImage: `url(${data?.fields.image.fields.file.url})`,
 
     // height: "800px",
     width: "100%",
@@ -29,8 +30,14 @@ const Banner = () => {
                     data-aos-duration="2000"
                     className="aos-init aos-animate"
                   >
-                    OVER 55 YEARS <br />
-                    <span>OF SUCCESS</span>
+                  {data?.fields.headline.split('\n').map((line, index) => (
+            <React.Fragment key={index}>
+              {line}
+              <br />
+            </React.Fragment>
+          ))}   
+          {/* {data?.fields.headline} */}
+
                   </h1>
                   <p
                     className="intro-text aos-init aos-animate"
@@ -38,7 +45,7 @@ const Banner = () => {
                     data-aos-delay="100"
                     data-aos-duration="2000"
                   >
-                    The Power to Lead.
+                   {data?.fields.subtitle}
                   </p>
                 </div>
               </div>

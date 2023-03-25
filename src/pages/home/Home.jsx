@@ -1,4 +1,4 @@
-import React from "react";
+import { useEffect,useState } from 'react';
 
 import Banner from "../../Components/banner/Banner";
 import Alfaisal from "../../Components/alfaisal/Alfaisal";
@@ -10,11 +10,53 @@ import CommitmentEducation from "../../Components/commitmnet/CommitmentEducation
 import LatestNews from "../../Components/latesnews/LatestNews";
 import Careers from "../../Components/careers/Careers";
 import Contact from "../../Components/contact/Contact";
+import { getHomePageData } from "../../contentful";
 
 const Home = () => {
+  const [data, setData] = useState([]);
+  
+  useEffect( () => {
+  
+    getHomePageData().then((pages) => {
+      setData(pages);
+    });
+    
+  },[])
+  
+  // console.log("home from newwvcomp:",data)
+
   return (
     <div>
-      <Banner />
+      {data &&
+        data.sections?.map((section, index) => {
+          switch (section.fields.internalName) {
+
+            case "banner":
+              return <Banner key={index} data={section} />;
+            case "About-us":
+              return <Alfaisal key={index} data={section} />;
+            case "chairman-message":
+              return <Chairman key={index} data={section} />;
+            case "history-section":
+              return <OurHistory key={index} data={section} />;
+            case "business-strategy":
+              return <WorldMap key={index} data={section} />;
+            case "services-section":
+              return <Whatwedo key={index} data={section} />;
+            case "social-responsibility":
+              return <CommitmentEducation key={index} data={section} />;
+            case "news":
+              return <LatestNews key={index} data={section} />;
+              case "careers":
+              return <Careers key={index} data={section} />;
+              case "home-contact":
+              return <Contact key={index} data={section} />;
+
+            default:
+              return null;
+          }
+        })}
+      {/* <Banner />
       <Alfaisal />
       <Chairman />
       <OurHistory />
@@ -23,7 +65,7 @@ const Home = () => {
       <CommitmentEducation />
       <LatestNews />
       <Careers />
-      <Contact />
+      <Contact /> */}
     </div>
   );
 };

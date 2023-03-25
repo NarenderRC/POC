@@ -1,11 +1,27 @@
 import React from "react";
 import "./Contact.css";
-import linkedin from "../../images/home-linkedin.png";
-import fb from "../../images/home-facebook.png";
-import twitter from "../../images/home-twitter.png";
-import Utube from "../../images/home-youtube.png";
+import Linkedin from "../../images/home-linkedin.png";
+import Facebook from "../../images/home-facebook.png";
+import Twitter from "../../images/home-twitter.png";
+import Youtube from "../../images/home-youtube.png";
 
-const Contact = () => {
+const Contact = ({data}) => {
+  console.log("ccc ===", data)
+  function getImageByInternalName(internalName) {
+    switch (internalName) {
+      case 'Facebook':
+        return Facebook;
+        case 'Linkedin':
+          return Linkedin;
+      case 'Twitter':
+        return Twitter;
+      case 'Youtube':
+        return Youtube;
+      default:
+        return null; // or a default image
+    }
+  }
+  
   return (
     <>
       <div className="boxes-row1 row home-box10">
@@ -14,7 +30,7 @@ const Contact = () => {
             <div className="col-md-4 col-sm-4 col-xs-12 hmbox10-left-wrap ">
               <div className="home-box10-content hmbox10-left ">
                 <h2 className="hm-contact-title">
-                  <span>CONTACT</span> US
+                 {data?.fields.title}
                 </h2>
               </div>
             </div>
@@ -24,32 +40,38 @@ const Contact = () => {
                   OUR <span>ADDRESS</span>
                 </h3>
                 <p>
-                  Al Faisal Holding
+                {data?.fields.address.split('\n').map((line, index) => (
+            <React.Fragment key={index}>
+              {line}
+              <br />
+            </React.Fragment>
+          ))} 
                   <br />
-                  City Tower, Floor 20, West Bay
+                  Telephone: {data?.fields.telephone}
                   <br />
-                  Doha - Qatar
-                  <br />
-                  Telephone: +974 44223830
-                  <br />
-                  Fax: +974 44223800
+                  Fax: {data?.fields.fax}
                   <br />
                   <a href="mailto:pr@alfaisalholding.com" target="_self">
-                    pr@alfaisalholding.com
+                  {data?.fields.email}
                   </a>
                 </p>
 
                 <div className="hm-contact-social">
                   <ul className="rad-list">
+                    {data?.fields.socialLinks.fields.links.map((link,i)=>(
+
                     <a
                       target="_blank"
                       title="Opens in a new window"
-                      href="https://www.linkedin.com/company/al-faisal-holding-co-"
+                      href={link?.fields.buttonLink}
                     >
-                      <img src={linkedin} alt="" />
-                    </a>
 
-                    <a
+                    
+                      <img src={getImageByInternalName(link?.fields.internalName)} alt="" />
+                    </a>
+                    ))}
+
+                    {/* <a
                       target="_blank"
                       title="Opens in a new window"
                       href="https://www.facebook.com/AFHQA/"
@@ -71,7 +93,7 @@ const Contact = () => {
                       href="https://www.youtube.com/channel/UCTXS6xDfWeq6cjinkXLZzuw"
                     >
                       <img src={Utube} alt="social" />
-                    </a>
+                    </a> */}
                   </ul>
                 </div>
               </div>
