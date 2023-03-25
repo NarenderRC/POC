@@ -3,7 +3,7 @@ import Carousel from "react-bootstrap/Carousel";
 
 import artic from "../../images/2003-artric.jpg";
 import hilton from "../../images/2009-hilton-hurghada.jpg";
-import four from "../../images/2010-four-seasons.jpg";
+// import four from "../../images/2010-four-seasons.jpg";
 import "./OurHistory.css";
 const OurHistory = () => {
   return (
@@ -41,7 +41,7 @@ const OurHistory = () => {
             </div>
           </Carousel.Item>
           <Carousel.Item>
-            <img className="artic-image" src={four} alt="Third slide" />
+            <img className="artic-image" src={hilton} alt="Third slide" />
             <Carousel.Caption></Carousel.Caption>
           </Carousel.Item>
         </Carousel>

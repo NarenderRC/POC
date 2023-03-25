@@ -13,8 +13,6 @@ const Navbar = () => {
         </div>
         <div>
           <Nav>
-            {/* <Bars /> */}
-
             <NavMenu>
               <NavLink to="/home" activeStyle>
                 Home

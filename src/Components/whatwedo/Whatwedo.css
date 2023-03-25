@@ -1,11 +1,6 @@
-* {
-  box-sizing: border-box;
-}
-
-.column {
-  float: left;
-  width: 33.33%;
-  padding: 5px;
+.home-box6-title {
+  margin-left: 452px;
+  color: #00305b;
 }
 
 /* Clearfix (clear floats) */
@@ -16,4 +11,43 @@
 }
 .whatwedo-img {
   width: 100px;
+}
+
+.image-container {
+  display: flex;
+}
+
+.image-container img {
+  background: no-repeat center center;
+  background-size: cover;
+  margin-bottom: 10px;
+  padding: 10px;
+  height: 536px;
+  width: 436px;
+  margin-top: 23px;
+  display: flex;
+}
+.text-block {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(0, 48, 91, 0.65);
+  color: white;
+  padding-left: 16px;
+  padding-right: 8px;
+  position: relative;
+  font-family: Arial;
+  height: 132px;
+  margin-left: -406px;
+  margin-top: 416px;
+  width: 414px;
+  text-align: center;
+  display: flexbox;
+}
+
+#btn-on-images {
+  align-items: center;
+  margin-right: 26px;
+  margin-left: 68px;
+  margin-bottom: 13px;
 }

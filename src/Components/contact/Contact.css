@@ -1,0 +1,45 @@
+.hm-contact-title {
+  text-align: right;
+  font-size: 38px;
+  font-weight: 600;
+  color: #fff;
+  padding-bottom: 5px;
+  margin-top: -27px;
+}
+
+.hmbox10-left-wrap {
+  background-color: rgba(9, 58, 106, 0.9) /*rgba(0, 48, 91, 0.4);; */;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  /* height: auto; */
+  margin-bottom: 20px;
+  margin-top: -60px;
+}
+.hmbox10-right-wrap {
+  background-color: rgba(15, 76, 133, 0.8);
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin-bottom: 20px;
+  margin-top: -60px;
+}
+.home-box10-content {
+  color: #fff;
+  height: 380px;
+  text-align: left;
+  margin-top: 120px;
+}
+.hmbox10-right {
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.home-box10-content a {
+  color: #fff;
+  text-decoration: underline;
+}
+.rad-list img {
+  float: left;
+  padding-right: 32px;
+  margin-right: 5px;
+  margin-left: -31px;
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import "./Alfaisal.css";
 import Button from "react-bootstrap/Button";
+
 const Alfaisal = () => {
   return (
     <>
@@ -12,15 +13,6 @@ const Alfaisal = () => {
           </h1>
         </div>
 
-        {/* <div className="video-box">
-          <iframe
-            width="560px"
-            height="340px"
-            className="external-web"
-            src="https://www.youtube.com/embed/rUZ7IaxIIXE"
-            allowfullscreen=""
-          ></iframe>
-        </div> */}
         <div className="row">
           <div className="column1">
             <div className="home-box2-content">

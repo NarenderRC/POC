@@ -1,4 +1,3 @@
-import "./App.css";
 import Navbar from "./Components/Navbar/Navbar";
 import {
   Route,
@@ -9,7 +8,7 @@ import {
 import Home from "./pages/home/Home";
 import Media from "./pages/media/Media";
 import AboutUs from "./pages/aboutus/AboutUs";
-
+import "./App.css";
 const App = () => {
   return (
     <>

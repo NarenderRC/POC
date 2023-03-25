@@ -7,8 +7,6 @@ h2 {
   /* color: #00305b; */
   color: #fff;
   font-family: "Arial", Helvetica, sans-serif;
-  /* padding-bottom: 5px; */
-  /* line-height: 1.222em; */
 }
 .home-box1-content {
   height: 800px;
@@ -17,4 +15,8 @@ h2 {
   vertical-align: middle;
   text-align: right;
   padding: 20px 50px 10px 50px;
+}
+.home-box1-content-outer {
+  margin-top: -71px;
+  margin-left: -10px;
 }
