@@ -6,7 +6,7 @@ import srcmueseum from "../../images/bg -school.jpg";
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
 const CommitmentEducation = ({data}) => {
-  // console.log("new ===", data)
+ console.log("ffffffff ===", data)
   return (
     <>
       <div className="row">
@@ -29,17 +29,15 @@ const CommitmentEducation = ({data}) => {
         {/* make a card component so we can map through data here */}
         <div className="col-md-6 col-sm-6 col-xs-12 home-box7-right">
           <div className="home-box7-rhs home-box7-rhs-1">
-            <img src={mueseum} className="mueseum-img" alt="bg-museum" />
+            <img src={data?.fields.cards[0].fields.image.fields.file.url} className="mueseum-img" alt="bg-museum" />
             <div className="text-block1">
-              <h2>Sheikh Faisal Bin Qassim Al Thani Museum</h2>
+              <h2>{data?.fields.cards[0].fields.title}</h2>
             </div>
             <div className="bgschool">
-              <img src={srcmueseum} className="mueseum-img" alt="bg-museum" />
+              <img src={data?.fields.cards[1].fields.image.fields.file.url} className="mueseum-img" alt="bg-museum" />
               <div className="text-block1">
                 <h2>
-                  Al Faisal Without Borders
-                  <br />
-                  Foundation
+              {data?.fields.cards[1].fields.title}
                 </h2>
               </div>
             </div>
