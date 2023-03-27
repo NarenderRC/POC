@@ -1,9 +1,9 @@
 import React from "react";
 import doharesidence from "../../images/2020-aleph-doha-residences.jpg";
-import Img from "../../images/alfisal.png";
+// import Img from "../../images/alfisal.png";
 import "./Banner.css";
-const Banner = ({data}) => {
-  console.log("banner data", data)
+const Banner = ({ data }) => {
+  console.log("banner data", data);
   const myStyle = {
     backgroundImage: `url(${data?.fields.image.fields.file.url})`,
 
@@ -30,14 +30,13 @@ const Banner = ({data}) => {
                     data-aos-duration="2000"
                     className="aos-init aos-animate"
                   >
-                  {data?.fields.headline.split('\n').map((line, index) => (
-            <React.Fragment key={index}>
-              {line}
-              <br />
-            </React.Fragment>
-          ))}   
-          {/* {data?.fields.headline} */}
-
+                    {data?.fields.headline.split("\n").map((line, index) => (
+                      <React.Fragment key={index}>
+                        {line}
+                        <br />
+                      </React.Fragment>
+                    ))}
+                    {/* {data?.fields.headline} */}
                   </h1>
                   <p
                     className="intro-text aos-init aos-animate"
@@ -45,7 +44,7 @@ const Banner = ({data}) => {
                     data-aos-delay="100"
                     data-aos-duration="2000"
                   >
-                   {data?.fields.subtitle}
+                    {data?.fields.subtitle}
                   </p>
                 </div>
               </div>

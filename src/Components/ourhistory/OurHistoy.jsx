@@ -3,7 +3,9 @@ import Carousel from "react-bootstrap/Carousel";
 
 import artic from "../../images/2003-artric.jpg";
 import hilton from "../../images/2009-hilton-hurghada.jpg";
-// import four from "../../images/2010-four-seasons.jpg";
+import four from "../../images/fourseson.jpg";
+import washingtondc from "../../images/washington-dc.jpg";
+import serton from "../../images/serton.jpg";
 import "./OurHistory.css";
 const OurHistory = () => {
   return (
@@ -14,35 +16,108 @@ const OurHistory = () => {
       <div className="row">
         <Carousel variant="dark">
           <Carousel.Item>
-            {/* <div className="column3">
-              <div className="home-box2-content">
+            <div className="container-slide">
+              <div className="hItem-text">
+                <h1 className="year">2003</h1>
                 <p>
-                  Al Faisal Holding, is one of Qatar’s leading private companies
-                  that played a significant role in the development of the Qatar
-                  economy and infrastructure attracting many foreign investments
-                  and creating immense career opportunities.
+                  <strong>Al Rayyan Tourism Investment Company (ARTIC)</strong>
+                </p>
+
+                <p>
+                  Established in 2003, ARTIC is a wholly owned subsidiary of Al
+                  Faisal Holding and is headquartered in Qatar. The Company is
+                  engaged in real estate development, acquisitions and leasing.
+                  Its primary focus is on the hospitality sector and
+                  hospitality-related services with investments spread over
+                  MENA, Europe and the United States.
                 </p>
               </div>
-            </div> */}
-            <img className="artic-image" src={artic} alt="First slide" />
-          </Carousel.Item>
-          <Carousel.Item>
-            <img className="artic-image" src={hilton} alt="Second slide" />
-
-            <div className="column3">
-              <div className="home-box2-content">
-                {/* <p>
-                  Al Faisal Holding, is one of Qatar’s leading private companies
-                  that played a significant role in the development of the Qatar
-                  economy and infrastructure attracting many foreign investments
-                  and creating immense career opportunities.
-                </p> */}
+              <div className="hItem-img">
+                <img src={artic} alt="" width="350" height="235" />
               </div>
             </div>
           </Carousel.Item>
           <Carousel.Item>
-            <img className="artic-image" src={hilton} alt="Third slide" />
-            <Carousel.Caption></Carousel.Caption>
+            <div className="container-slide">
+              <div class="hItem-text">
+                <p className="year">2015</p>
+                <p>
+                  <strong>
+                    The Four Seasons at The First Residence Cairo and The First
+                    Mall
+                  </strong>
+                </p>
+
+                <p>
+                  Further expansion of Al Faisal Holding profile into the
+                  Egyptian market was accomplished by the acquisition of The
+                  Four Seasons at The First Residence Cairo, and The First Mall.
+                  The hotel is the very first Four Seasons Hotel in the Middle
+                  East.
+                </p>
+              </div>
+              <div className="hItem-img">
+                <img src={washingtondc} alt="" width="350" height="235" />
+              </div>
+            </div>
+          </Carousel.Item>
+          <Carousel.Item>
+            <div className="container-slide">
+              <div className="hItem-text">
+                <p className="year">2009</p>
+                <p>
+                  <strong>Hilton Hurghada Plaza</strong>
+                </p>
+
+                <p>
+                  Entering the Egyptian market through the acquisition of Hilton
+                  Hurghada Plaza through Al Rayyan Tourism Investment Company
+                  (ARTIC)
+                </p>
+              </div>
+              <div className="hItem-img">
+                <img src={hilton} alt="" width="350" height="235" />
+              </div>
+            </div>
+          </Carousel.Item>
+          <Carousel.Item>
+            <div className="container-slide">
+              <div class="hItem-text">
+                <p className="year">2011</p>
+                <p>
+                  <strong>Marriott Marquis City Center Doha Hotel&nbsp;</strong>
+                </p>
+                <p>(previously Renaissance &amp; Courtyard by Marriott) </p>
+
+                <p>
+                  Al Faisal’s expansion in the Qatari hospitality market through
+                  the development of the properties of Marriott Marquis City
+                  Center Doha Hotel, which were originally operating as The
+                  Renaissance and Courtyard by Marriott.
+                </p>
+              </div>
+              <div className="hItem-img">
+                <img src={four} alt="" width="350" height="235" />
+              </div>
+            </div>
+          </Carousel.Item>
+          <Carousel.Item>
+            <div className="container-slide">
+              <div class="hItem-text">
+                <p className="year">2019</p>
+                <p>
+                  <strong>Sheraton Istanbul City Center</strong>
+                </p>
+
+                <p>
+                  Expansion in the European market through the acquisition of
+                  Sheraton Istanbul City Center Hotel by ARTIC.
+                </p>
+              </div>
+              <div className="hItem-img">
+                <img src={serton} alt="" width="350" height="235" />
+              </div>
+            </div>
           </Carousel.Item>
         </Carousel>
       </div>

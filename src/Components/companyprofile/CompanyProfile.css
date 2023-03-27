@@ -1,1 +1,116 @@
+/* company profile-css */
 
+.w3-third {
+  margin-left: 13rem;
+  margin-top: -22rem;
+  display: block;
+  width: 20rem;
+}
+
+.w3-row-padding2 {
+  margin-left: 21rem;
+  margin-top: -4rem;
+}
+h1 {
+  font-size: 1.692em;
+  line-height: 1.182em;
+  text-transform: uppercase;
+  color: #002d62;
+}
+.paragraph {
+  text-align: justify;
+  width: 19rem;
+  /* line-height: 1.333em; */
+  font-size: 14px;
+}
+
+/* chairman -msg-css */
+.w3-third2 {
+  margin-left: 13rem;
+  margin-top: -33rem;
+  display: block;
+}
+.w3-row-padding2 {
+  margin-left: 21rem;
+  margin-top: -8rem;
+}
+h2 {
+  font-size: 1.692em;
+  line-height: 1.182em;
+  text-transform: uppercase;
+  color: #002d62;
+}
+h4 {
+  color: #002d62;
+}
+.box-image-title {
+  background: #002d62;
+  color: #fff;
+  padding: 5px 9px;
+  font-size: 0.923em;
+  width: 135px;
+  height: 67px;
+}
+.inner-box-text1 {
+  font-size: 1.154em;
+  line-height: 1.2em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  width: 22%;
+  float: left;
+  margin-top: -260px;
+  margin-left: 143px;
+}
+
+a.read-more {
+  color: #002d62;
+  font-style: italic;
+  text-decoration: none;
+  position: relative;
+  padding-left: 22px;
+  margin-top: 40px;
+}
+
+.content-col {
+  margin-top: 40px;
+  margin-bottom: -20px;
+}
+
+.Vision {
+  color: #002d62;
+  margin-top: -36px;
+  margin-left: 0rem;
+}
+
+h3.Vision {
+  display: inline-block;
+}
+.paragraphV-vision {
+  text-align: justify;
+  width: 19rem;
+  /* line-height: 1.333em; */
+  font-size: 17px;
+}
+
+.content-col2 {
+  /* margin-top: -2rem; */
+}
+#strategy {
+  margin-right: 38rem;
+  margin-top: 2rem;
+}
+#strategy-para {
+  margin-right: 2rem;
+  text-align: justify;
+}
+
+.content-col-last {
+  margin-top: -37rem;
+  margin-left: 57rem;
+}
+.last-title {
+  color: #002d62;
+  text-align: justify;
+  width: 18rem;
+  line-height: 1.333em;
+}

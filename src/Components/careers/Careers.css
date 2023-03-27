@@ -2,6 +2,7 @@
   color: #00305b;
   margin-bottom: 10px;
   font-size: 35px;
+  margin-top: -50px;
 }
 
 .home-box9-content {
@@ -12,4 +13,7 @@
   text-align: justify;
   line-height: 33px;
   font-family: "Arial", Helvetica, sans-serif;
+}
+.home-box9-image {
+  margin-top: -6rem;
 }

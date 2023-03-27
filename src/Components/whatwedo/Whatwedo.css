@@ -2,7 +2,10 @@
   margin-left: 452px;
   color: #00305b;
 }
-
+.row-container {
+  display: flex;
+  width: 600px;
+}
 /* Clearfix (clear floats) */
 .row::after {
   content: "";
@@ -23,7 +26,7 @@
   margin-bottom: 10px;
   padding: 10px;
   height: 536px;
-  width: 436px;
+  width: 400px;
   margin-top: 23px;
   display: flex;
 }
@@ -38,9 +41,9 @@
   position: relative;
   font-family: Arial;
   height: 132px;
-  margin-left: -406px;
+  margin-left: -370px;
   margin-top: 416px;
-  width: 414px;
+  width: 379px;
   text-align: center;
   display: flexbox;
 }

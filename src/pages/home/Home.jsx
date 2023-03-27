@@ -62,6 +62,7 @@ const Home = () => {
       <OurHistory />
       <WorldMap />
       <Whatwedo />
+
       <CommitmentEducation />
       <LatestNews />
       <Careers />

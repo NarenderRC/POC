@@ -1,22 +1,20 @@
 import React from "react";
 import "./Alfaisal.css";
 import Button from "react-bootstrap/Button";
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
-
-const Alfaisal = ({data}) => {
- 
+const Alfaisal = ({ data }) => {
   return (
     <>
       <div className="boxes-row row box-pad home-box2">
         <div className="alfaisal-title">
           <h1>
-          {data?.fields.headline.split('\n').map((line, index) => (
-            <React.Fragment key={index}>
-              {line}
-              <br />
-            </React.Fragment>
-          ))} 
+            {data?.fields.headline.split("\n").map((line, index) => (
+              <React.Fragment key={index}>
+                {line}
+                <br />
+              </React.Fragment>
+            ))}
             {/* AL FAISAL <br />
             <span className="holding">HOLDING</span> */}
           </h1>
@@ -25,7 +23,7 @@ const Alfaisal = ({data}) => {
         <div className="row">
           <div className="column1">
             <div className="home-box2-content">
-           { documentToReactComponents(data?.fields.bodyText)}
+              {documentToReactComponents(data?.fields.bodyText)}
               {/* <p>
                 Al Faisal Holding, is one of Qatar’s leading private companies
                 that played a significant role in the development of the Qatar
@@ -45,8 +43,8 @@ const Alfaisal = ({data}) => {
           <div className="column2">
             <div className="video-box">
               <iframe
-                width="816px"
-                height="400px"
+                width="790px"
+                height="405px"
                 className="external-web"
                 src={data?.fields.videoUrl}
                 allowfullscreen=""

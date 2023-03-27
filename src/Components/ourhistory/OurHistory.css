@@ -22,4 +22,33 @@
   padding: 0px;
   clear: both;
   color: #00305b;
+  text-align: justify;
+}
+
+.hItem-text {
+  width: 50% /*350px;; */;
+  padding: 5px 7px;
+  float: left;
+  font-size: 16px;
+  color: #00305b;
+  text-align: justify;
+  margin-left: 12rem;
+  margin-bottom: 25px;
+}
+p {
+  text-align: justify;
+  font-size: 20px;
+}
+
+.year {
+  font-size: 35px;
+}
+.w3-third-a {
+  margin-top: 2rem;
+  width: 50% /*350px;; */;
+  padding: 5px 7px;
+  float: left;
+  font-size: 16px;
+  color: #00305b;
+  text-align: justify;
 }
