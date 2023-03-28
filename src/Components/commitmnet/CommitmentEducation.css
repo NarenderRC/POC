@@ -26,9 +26,10 @@
   position: relative;
 }
 .mueseum-img {
-  height: 396px;
-  width: 616px;
-  padding: 9px;
+  height: 361px;
+  width: 630px;
+  padding: 26px;
+  margin-top: -47px;
 }
 .bgschool {
   /* padding: 10px; */
@@ -37,7 +38,7 @@
 }
 
 .text-block1 h2 {
-  bottom: 232px;
+  bottom: 257px;
   right: 20px;
   position: absolute;
   color: white;

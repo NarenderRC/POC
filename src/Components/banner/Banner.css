@@ -26,10 +26,21 @@ h2 {
   vertical-align: middle;
   text-align: right;
   padding: 20px 50px 10px 50px;
+  color: #fff;
+}
+.home-box1-content h1 {
+  color: #fff;
 }
 .home-box1-content-outer {
-  margin-top: -71px;
+  margin-top: -76px;
   margin-left: -10px;
   display: table;
   width: 100%;
+}
+h1 {
+  font-size: 1.692em;
+  line-height: 1.182em;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: left;
 }
