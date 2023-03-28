@@ -1,5 +1,5 @@
 import React from "react";
-import doharesidence from "../../images/2020-aleph-doha-residences.jpg";
+// import doharesidence from "../../images/2020-aleph-doha-residences.jpg";
 // import Img from "../../images/alfisal.png";
 import "./Banner.css";
 const Banner = ({ data }) => {
@@ -24,12 +24,7 @@ const Banner = ({ data }) => {
             <div className="col-md-6 col-sm-6 col-xs-12 ">
               <div className="home-box1-content-outer">
                 <div className="home-box1-content">
-                  <h1
-                    data-aos="fade"
-                    data-aos-delay="100"
-                    data-aos-duration="2000"
-                    className="aos-init aos-animate"
-                  >
+                  <h1>
                     {data?.fields.headline.split("\n").map((line, index) => (
                       <React.Fragment key={index}>
                         {line}
