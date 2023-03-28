@@ -6,16 +6,45 @@ import hilton from "../../images/2009-hilton-hurghada.jpg";
 import four from "../../images/fourseson.jpg";
 import washingtondc from "../../images/washington-dc.jpg";
 import serton from "../../images/serton.jpg";
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+
 import "./OurHistory.css";
-const OurHistory = () => {
+const OurHistory = ({data}) => {
+
+  console.log("history,",data)
   return (
     <>
       <div>
-        <h1 className="our-history">Our History</h1>
+        <h1 className="our-history">{data?.fields.title}</h1>
       </div>
       <div className="row">
         <Carousel variant="dark">
-          <Carousel.Item>
+          {data?.fields.years.map((year,i)=>(
+             <Carousel.Item>
+             <div className="container-slide">
+               <div className="hItem-text">
+                 <h1 className="year">{year.fields.year}</h1>
+                 { documentToReactComponents(year.fields.historyDetails[0].fields.description)}
+                 {/* <p>
+                   <strong>Al Rayyan Tourism Investment Company (ARTIC)</strong>
+                 </p>
+ 
+                 <p>
+                   Established in 2003, ARTIC is a wholly owned subsidiary of Al
+                   Faisal Holding and is headquartered in Qatar. The Company is
+                   engaged in real estate development, acquisitions and leasing.
+                   Its primary focus is on the hospitality sector and
+                   hospitality-related services with investments spread over
+                   MENA, Europe and the United States.
+                 </p> */}
+               </div>
+               <div className="hItem-img">
+                 <img src={year.fields.historyDetails[0].fields.image.fields.file.url} alt="" width="350" height="235" />
+               </div>
+             </div>
+           </Carousel.Item>
+          ))}
+          {/* <Carousel.Item>
             <div className="container-slide">
               <div className="hItem-text">
                 <h1 className="year">2003</h1>
@@ -118,7 +147,7 @@ const OurHistory = () => {
                 <img src={serton} alt="" width="350" height="235" />
               </div>
             </div>
-          </Carousel.Item>
+          </Carousel.Item> */}
         </Carousel>
       </div>
     </>

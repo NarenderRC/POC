@@ -23,6 +23,7 @@
 .image-container img {
   background: no-repeat center center;
   background-size: cover;
+  object-fit: cover;
   margin-bottom: 10px;
   padding: 8px;
   height: 536px;

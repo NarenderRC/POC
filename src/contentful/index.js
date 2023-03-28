@@ -37,9 +37,8 @@ import { createClient } from 'contentful';
  
     
     const response = await client.getEntries({
-      content_type: 'landingPage',
-      'fields.slug': 'about-us',
-      include: 3
+      content_type: 'aboutLandingPage',
+      include: 2
     });
    //  console.log("from api func",response.items)
     return response.items[0].fields;

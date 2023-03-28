@@ -2,7 +2,8 @@ import React from "react";
 import bgimg from "../../images/aboutus.jpg";
 import "./SideNav.css";
 
-const SideNav = () => {
+const SideNav = ({data,banner}) => {
+  console.log('sidenav',banner)
   return (
     <>
       <div className="container-fluid">
@@ -13,13 +14,14 @@ const SideNav = () => {
                 <img
                   id="bannerImage"
                   className="BannerImage"
-                  src={bgimg}
+                  src={banner?.fields.image.fields.file.url}
                   alt=" bg"
                 />
               </div>
             </div>
             <div
               id="leftcol"
+              style={{marginTop: '50px'}}
               className="two-col-left col-md-3 col-sm-12 col-xs-12"
             >
               <div className="">
@@ -28,10 +30,13 @@ const SideNav = () => {
                 <div id="leftnavigation" className="left-navigation">
                   <div className="left-nav-dt">
                     <ul>
+                      {data?.map((link,i)=>(
+
                       <li className="level2">
-                        <span>Company Profile</span>
+                        <span>{link}</span>
                       </li>
-                      <li className="level2">
+                      ))}
+                      {/* <li className="level2">
                         <span>Organizational Chart</span>
                       </li>
 
@@ -62,7 +67,7 @@ const SideNav = () => {
                         <a href="/about-us/management/board-of-directors.aspx">
                           <span>Leadership</span>
                         </a>
-                      </li>
+                      </li> */}
                     </ul>
                   </div>
                 </div>

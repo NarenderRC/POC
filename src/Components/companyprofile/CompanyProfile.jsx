@@ -1,14 +1,36 @@
 import React from "react";
 import chairmanimg from "../../images/chairman.jpg";
 import "./CompanyProfile.css";
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import { BLOCKS, MARKS } from '@contentful/rich-text-types'
 
-const CompanyProfile = () => {
+const CompanyProfile = ({data}) => {
+
+  console.log("reall",data)
+
+  const options = {
+    renderNode: {
+      [BLOCKS.HEADING_3]: (node, children) => <h3 className="last-title">{children}</h3>,
+      [BLOCKS.PARAGRAPH]: (node, children) => <p className="paragraph">{children}</p>,
+      [BLOCKS.HEADING_4]: (node, children) => <h4 className="last-title">{children}</h4>,
+      [BLOCKS.EMBEDDED_ASSET]: (node) => {
+        const { title, description, file } = node.data.target.fields;
+        return <img alt={title} height={file.details.image.height} width={file.details.image.width} src={file.url} />;
+      },
+    },
+    renderMark: {
+      [MARKS.BOLD]: (text) => <b>{text}</b>,
+      [MARKS.ITALIC]: (text) => <em>{text}</em>,
+      [MARKS.UNDERLINE]: (text) => <u>{text}</u>,
+    },
+  };
   return (
     <>
       <div>
-        <div className="w3-row-padding">
-          <div className="w3-third">
-            <h1>
+        <div style={{marginTop: '8px'}} className="w3-row-padding">
+          <div  className="w3-third">
+          { documentToReactComponents(data?.firstSection,options)}
+            {/* <h1>
               Company Profile&nbsp; <br />
               Al&nbsp;Faisal&nbsp;Holding
             </h1>
@@ -33,30 +55,39 @@ const CompanyProfile = () => {
               href="/about-us/vision-mission-and-values.aspx"
             >
               Read more
-            </a>
+            </a> */}
           </div>
         </div>
-        <div className="w3-row-padding2">
+        <div  className="w3-row-padding2">
           <div className="w3-third2">
-            <h1>Chairman's message</h1>
-            <h4>Exceeding expectations</h4>
+          
+          {data?.secondSection?.fields.headline.split('\n').map((line, index) => (
+            <React.Fragment key={index}>
+              <h4>{line}</h4>
+            </React.Fragment>
+          ))} 
+            {/* <h1>Chairman's message</h1>
+            <h4>Exceeding expectations</h4> */}
             <div className="inner-box-content1">
-              <div className="box-image aboutus-image">
-                <img src={chairmanimg} alt="" width="135" height="110" />
+              <div style={{marginTop: '15px'}} className="box-image aboutus-image">
+                <img src={data?.secondSection?.fields.image.fields.file.url} alt="" width="135" height="110" />
                 <div className="box-image-title">
-                  H.E. Sheikh Faisal
+                  {data?.secondSection?.fields.image.fields.title}
+                  {/* H.E. Sheikh Faisal
                   <br /> Bin Qassim Al <br />
-                  Thani
+                  Thani */}
                 </div>
               </div>
-              <div className="inner-box-text1">
-                <p>
+              <div>
+             <p style={{marginTop: '8px'}}> { documentToReactComponents(data?.secondSection?.fields.bodyText,options)}</p>
+                {/* <p>
                   “It has been an exciting experience to witness the remarkable
                   economic development of Qatar.”
-                </p>
+                </p> */}
               </div>
               <div className="content-col border-left">
-                <h3 className="Vision">Vision and mission</h3>
+              { documentToReactComponents(data?.secondSectionBottom,options)}
+                {/* <h3 className="Vision">Vision and mission</h3>
                 <p className="paragraphV-vision">
                   To exceed expectations every time and place we interact
                 </p>
@@ -68,10 +99,9 @@ const CompanyProfile = () => {
                     resources and professionals come together and leading Qatar
                     with a world class international investment community.
                   </p>
-                  {/* <a class="read-more" href="/about-us/business-strategy.aspx">
-                  Read more
-                </a> */}
-                </div>
+                  
+                </div> */}
+                
               </div>
             </div>
           </div>
@@ -80,7 +110,8 @@ const CompanyProfile = () => {
           <div className="w3-row-padding3">
             <div className="w3-third3">
               <div class="content-col-last border-left">
-                <h3 className="last-title">Latest projects</h3>
+              { documentToReactComponents(data?.thirdSection,options)}
+                {/* <h3 className="last-title">Latest projects</h3>
 
                 <h4 className="last-title">Al Jazi Real Estate</h4>
                 <p className="paragraph">
@@ -103,7 +134,7 @@ const CompanyProfile = () => {
                   propertys transformation to join the iconic JW Marriott brand,
                   set to offer a different perspective to the capital citys
                   hospitality scene.
-                </p>
+                </p> */}
               </div>
             </div>
           </div>

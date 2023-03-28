@@ -9,7 +9,7 @@
 
 .w3-row-padding2 {
   margin-left: 21rem;
-  margin-top: -4rem;
+  margin-top: -2rem;
 }
 h1 {
   font-size: 1.692em;
@@ -27,7 +27,7 @@ h1 {
 /* chairman -msg-css */
 .w3-third2 {
   margin-left: 13rem;
-  margin-top: -33rem;
+  margin-top: -34rem;
   display: block;
 }
 .w3-row-padding2 {
@@ -54,9 +54,8 @@ h4 {
 .inner-box-text1 {
   font-size: 1.154em;
   line-height: 1.2em;
-  font-weight: bold;
   letter-spacing: 1px;
-  width: 22%;
+  width: 12%;
   float: left;
   margin-top: -260px;
   margin-left: 143px;
